@@ -1,5 +1,5 @@
 /*
-Copyright 2015, 2016 OCAD University
+Copyright 2017 OCAD University
 
 Licensed under the New BSD license. You may not use this file except in
 compliance with this License.
@@ -14,8 +14,12 @@ https://raw.githubusercontent.com/GPII/nexus/master/LICENSE.txt
 
 var fluid = require("infusion");
 
-fluid.module.register("gpii-nexus", __dirname, require);
-require("./src/Nexus.js");
-require("./src/CoOccurrenceEngine.js");
-require("./src/NexusModelHistory.js");
-require("./src/NexusGrades.js");
+fluid.defaults("gpii.selfDestroyingModel", {
+    gradeNames: ["fluid.modelComponent"],
+    listeners: {
+        "onDestroy.deleteModel": {
+            listener: "{that}.applier.change",
+            args: ["", null, "DELETE"]
+        }
+    }
+});
