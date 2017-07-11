@@ -15,12 +15,10 @@ https://raw.githubusercontent.com/GPII/nexus/master/LICENSE.txt
 var fluid = require("infusion");
 
 var tests = [
-    "./AddRecipeTests.js",
+    //"./AddRecipeTests.js",
     "./BindModelTests.js",
     "./ConstructAndDestroyComponentTests.js",
-    "./CoOccurrenceEngineTests.js",
     "./ReadDefaultsTests.js",
-    "./RecipeMatcherTests.js",
     "./RecipeProductWiringTests.js",
     "./WriteDefaultsTests.js"
 ];

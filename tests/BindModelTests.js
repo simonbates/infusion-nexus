@@ -35,7 +35,7 @@ gpii.tests.nexus.bindModel.componentOptions = {
 };
 
 gpii.tests.nexus.bindModel.registerModelListenerForPath = function (nexusComponentRoot,componentPath, modelPath, event) {
-    var component = nexusComponentRoot.componentForPath(componentPath);
+    var component = gpii.nexus.componentForPathInContainer(nexusComponentRoot, componentPath);
     component.applier.modelChanged.addListener(modelPath, event.fire);
 };
 
@@ -80,7 +80,7 @@ gpii.tests.nexus.bindModel.testDefs = [
                 func: "gpii.test.nexus.assertNoComponentAtPath",
                 args: [
                     "Component not yet constructed",
-                    "{gpii.nexus.nexusComponentRoot}",
+                    "{gpii.tests.nexus.componentRoot}",
                     "{tests}.options.testComponentPath"
                 ]
             },
@@ -96,7 +96,7 @@ gpii.tests.nexus.bindModel.testDefs = [
             {
                 func: "gpii.tests.nexus.bindModel.registerModelListenerForPath",
                 args: [
-                    "{gpii.nexus.nexusComponentRoot}",
+                    "{gpii.tests.nexus.componentRoot}",
                     "{tests}.options.testComponentPath",
                     "{tests}.options.testModelPath",
                     "{testCaseHolder}.events.targetModelChanged"
@@ -135,7 +135,7 @@ gpii.tests.nexus.bindModel.testDefs = [
                 listener: "gpii.test.nexus.assertComponentModel",
                 args: [
                     "Model updated",
-                    "{gpii.nexus.nexusComponentRoot}",
+                    "{gpii.tests.nexus.componentRoot}",
                     "{tests}.options.testComponentPath",
                     {
                         "model.path\\seg1": {
@@ -174,7 +174,7 @@ gpii.tests.nexus.bindModel.testDefs = [
                 listener: "gpii.test.nexus.assertComponentModel",
                 args: [
                     "Model updated",
-                    "{gpii.nexus.nexusComponentRoot}",
+                    "{gpii.tests.nexus.componentRoot}",
                     "{tests}.options.testComponentPath",
                     {
                         "model.path\\seg1": {
@@ -219,7 +219,7 @@ gpii.tests.nexus.bindModel.testDefs = [
                 listener: "gpii.test.nexus.assertComponentModel",
                 args: [
                     "Model updated",
-                    "{gpii.nexus.nexusComponentRoot}",
+                    "{gpii.tests.nexus.componentRoot}",
                     "{tests}.options.testComponentPath",
                     {
                         "model.path\\seg1": {

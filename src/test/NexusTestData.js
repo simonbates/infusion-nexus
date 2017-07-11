@@ -15,6 +15,10 @@ https://raw.githubusercontent.com/GPII/nexus/master/LICENSE.txt
 var fluid = require("infusion"),
     gpii = fluid.registerNamespace("gpii");
 
+fluid.defaults("gpii.nexus.recipeProduct", {
+    gradeNames: "fluid.modelComponent"
+});
+
 gpii.test.nexus.reactantAOptions = {
     gradeNames: ["fluid.modelComponent"],
     model: {

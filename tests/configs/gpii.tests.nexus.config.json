@@ -14,12 +14,11 @@
                             "options": {
                                 "distributeOptions": [
                                     {
-                                        "target": "{that gpii.nexus.nexusComponentRoot}.options.gradeNames",
-                                        "record": "fluid.resolveRoot"
-                                    },
-                                    {
-                                        "target": "{that gpii.nexus.coOccurrenceEngine}.options.gradeNames",
-                                        "record": "fluid.resolveRoot"
+                                        "target": "{that nexusComponentRoot}.options.gradeNames",
+                                        "record": [
+                                            "gpii.tests.nexus.componentRoot",
+                                            "fluid.resolveRoot"
+                                        ]
                                     }
                                 ]
                             }
