@@ -15,7 +15,6 @@ https://raw.githubusercontent.com/GPII/nexus/master/LICENSE.txt
 var fluid = require("infusion");
 
 var tests = [
-    //"./AddRecipeTests.js",
     "./BindModelTests.js",
     "./ConstructAndDestroyComponentTests.js",
     "./ReadDefaultsTests.js",

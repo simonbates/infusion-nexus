@@ -159,17 +159,6 @@ fluid.defaults("gpii.test.nexus.testCaseHolder", {
                     path: "{tests}.options.testComponentPath2"
                 }
             }
-        },
-        addRecipeRequest: {
-            type: "kettle.test.request.http",
-            options: {
-                path: "/components/recipes.%recipeName",
-                port: "{configuration}.options.serverPort",
-                method: "POST",
-                termMap: {
-                    recipeName: "{tests}.options.testRecipeName"
-                }
-            }
         }
     }
 });
