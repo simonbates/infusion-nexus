@@ -18,7 +18,6 @@ var tests = [
     "./BindModelTests.js",
     "./ConstructAndDestroyComponentTests.js",
     "./ReadDefaultsTests.js",
-    "./RecipeProductWiringTests.js",
     "./WriteDefaultsTests.js"
 ];
 
