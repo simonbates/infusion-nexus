@@ -38,9 +38,9 @@ gpii.tests.nexus.constructComponent.componentOptions2 = {
 };
 
 // Note that these tests verify steps by peeking into the Nexus internal
-// state. This is done by making the gpii.nexus.nexusComponentRoot
-// addressable with the fluid.resolveRoot grade in the test Kettle app
-// config.
+// state. This is done by making the nexusComponentRoot addressable by
+// giving it the grades "gpii.tests.nexus.componentRoot" and
+// "fluid.resolveRoot" in the test Kettle app config.
 
 gpii.tests.nexus.constructComponent.testDefs = [
     {

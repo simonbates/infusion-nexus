@@ -92,7 +92,7 @@ fluid.defaults("gpii.nexus.constructComponent.handler", {
     invokers: {
         handleRequest: {
             funcName: "gpii.nexus.constructComponent.handleRequest",
-            args: ["{request}.req.params.path", "{request}", "{gpii.nexus}.nexusComponentRoot"]
+            args: ["{request}.req.params.path", "{request}", "{nexusComponentRoot}"]
         }
     }
 });
@@ -109,7 +109,7 @@ fluid.defaults("gpii.nexus.destroyComponent.handler", {
     invokers: {
         handleRequest: {
             funcName: "gpii.nexus.destroyComponent.handleRequest",
-            args: ["{request}.req.params.path", "{request}", "{gpii.nexus}.nexusComponentRoot"]
+            args: ["{request}.req.params.path", "{request}", "{nexusComponentRoot}"]
         }
     }
 });
@@ -152,7 +152,7 @@ fluid.defaults("gpii.nexus.bindModel.handler", {
                 "{request}.req.params.componentPath",
                 "{request}.req.params.modelPath",
                 "{that}.targetModelChangeListener",
-                "{gpii.nexus}.nexusComponentRoot"
+                "{nexusComponentRoot}"
             ]
         },
         onReceiveMessage: {
